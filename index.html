@@ -11,8 +11,13 @@
 <body>
     <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+
+    
     <div id="root"></div>
     <div id="rootReact"></div>
+    <div id="rootJSX"></div>
 
 
     <script>
@@ -31,9 +36,6 @@
         mark.textContent = " - this is random number";
         span.append(mark);
     </script>
-
-
-
 
     <script>
         const reactDiv = React.createElement('div', {
@@ -55,19 +57,27 @@
             //     ]
             // })
         // })
-
         React.createElement(
             'div', // tag
           { className: 'hello-world' },   // props- attributes (null),
              "test", //children
             //  "nice", ""
             );
-
-
         ReactDOM.render(reactDiv, document.querySelector('#rootReact'))
     </script>
 
+    <script type="text/babel">
+        const jsxDiv = (
+            <div className="hello-world">
+                <span>
+                    <strong>{Math.random()}</strong>
+                    <mark> - this is random  number </mark>
+                    </span>
+                    </div>
+        );
 
+        ReactDOM.render(jsxDiv, document.querySelector('#rootJSX'))
+    </script>
 
 
 </body>
