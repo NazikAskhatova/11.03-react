@@ -18,6 +18,7 @@
     <!-- <div id="root"></div>
     <div id="rootReact"></div> -->
     <div id="root"></div>
+    <div id="enhypen"></div>
 
     <!-- 
     <script>
@@ -78,8 +79,6 @@
             );
         }
 
-
-
         const App = (
             <div>
                 <RandomNumber max={10} />
@@ -90,6 +89,32 @@
         );
         ReactDOM.render(App, document.querySelector('#root'));
     </script>
+
+<br>
+
+
+<script type="text/babel">
+    function GivenTaken(props) {
+        return (
+            <div className="hello-world">
+                <span>
+                    <strong>{(Math.random() * props.max).toFixed()}</strong>
+                    <mark> - this is random  number </mark>
+                </span>
+            </div>
+        );
+    }
+
+    const Debut = (
+        <div>
+            <GivenTaken max={10} />
+            <GivenTaken max={100} />
+            <GivenTaken max={1000} />
+            <GivenTaken max={10000} />
+        </div>
+    );
+    ReactDOM.render(Debut, document.querySelector('#enhypen'));
+</script>
 
 
 </body>
