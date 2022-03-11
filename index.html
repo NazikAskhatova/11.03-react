@@ -17,12 +17,10 @@
 
     <script>
         const div = document.createElement('div');
-        div.textContent = Math.random();
         div.className = "hello-world";
         document.querySelector('#root').append(div);
 
         const span = document.createElement('span');
-        span.textContent = Math.random();
         div.append(span);
 
         const strong = document.createElement('strong');
@@ -32,9 +30,9 @@
         const mark = document.createElement('mark');
         mark.textContent = " - this is random number";
         span.append(mark);
-
-
     </script>
+
+
 
 
     <script>
@@ -42,8 +40,8 @@
             className: "hello-world",
         }, React.createElement(
             'span', {},
-            Recat.createElement('strong', {}, math.random()),
-            Recat.createElement('mark', {}, " - this is random number")
+            React.createElement('strong', {}, Math.random()),
+            React.createElement('mark', {}, " - this is random number")
         ));
 
             // children: React.createElement('span', {
@@ -60,9 +58,9 @@
 
         React.createElement(
             'div', // tag
-          { className: 'hello-world'},   // props- attributes (null),
+          { className: 'hello-world' },   // props- attributes (null),
              "test", //children
-             "nice", ""
+            //  "nice", ""
             );
 
 
